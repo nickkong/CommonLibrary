@@ -33,26 +33,26 @@ public class TipsDialog extends Dialog implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.dialog_left:
-                if(doConfirm==0){
-                    dismiss();
-                    listener.doConfirm();
-                }else if(doConfirm==1){
-                    dismiss();
-                }
-                break;
-            case R.id.dialog_right:
-                if(doConfirm==0){
-                    dismiss();
-                }else if(doConfirm==1){
-                    dismiss();
-                    listener.doConfirm();
-                }
-                break;
-            case R.id.btn_confirm:
-                dismiss();
-                listener.doConfirm();
-                break;
+//            case R.id.dialog_left:
+//                if(doConfirm==0){
+//                    dismiss();
+//                    listener.doConfirm();
+//                }else if(doConfirm==1){
+//                    dismiss();
+//                }
+//                break;
+//            case R.id.dialog_right:
+//                if(doConfirm==0){
+//                    dismiss();
+//                }else if(doConfirm==1){
+//                    dismiss();
+//                    listener.doConfirm();
+//                }
+//                break;
+//            case R.id.btn_confirm:
+//                dismiss();
+//                listener.doConfirm();
+//                break;
         }
 
     }

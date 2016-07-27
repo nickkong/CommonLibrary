@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 repositories {
     flatDir {
@@ -35,7 +35,6 @@ android {
         release.setRoot('build-types/release')
     }
     defaultConfig {
-        applicationId "com.nickkong.commonlibrary"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 105
