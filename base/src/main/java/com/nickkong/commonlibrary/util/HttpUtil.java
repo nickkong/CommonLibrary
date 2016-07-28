@@ -35,7 +35,7 @@ public class HttpUtil {
         RequestParams requestParams = new RequestParams(params);
 
         if(Constant.DEVELOPER_MODE){
-            Log.d(TAG,"post_requestParams=="+TAG+"-->"+RequestAddress.APP_URL + postName + requestParams.toString());
+            Log.d(TAG,"post_requestParams=="+postName + requestParams.toString());
         }
 
         AsyncHttpResponseHandler asyncHttpResponseHandler = new TextHttpResponseHandler() {
@@ -70,7 +70,7 @@ public class HttpUtil {
         asyncHttpResponseHandler.setCharset("UTF-8");
         AsyncHttpClient client = new AsyncHttpClient();
         client.setTimeout(Constant.CONNECT_TIMEOUT);
-        client.post(act, RequestAddress.APP_URL + postName, requestParams, asyncHttpResponseHandler);
+        client.post(act, postName, requestParams, asyncHttpResponseHandler);
     }
 
 
@@ -92,7 +92,7 @@ public class HttpUtil {
         RequestParams requestParams = new RequestParams(params);
 
         if(Constant.DEVELOPER_MODE){
-            Log.d(TAG,"get_requestParams=="+TAG+"-->"+RequestAddress.APP_URL + postName + requestParams.toString());
+            Log.d(TAG,"get_requestParams=="+postName + requestParams.toString());
         }
 
         AsyncHttpResponseHandler asyncHttpResponseHandler = new TextHttpResponseHandler() {
@@ -125,7 +125,7 @@ public class HttpUtil {
         asyncHttpResponseHandler.setCharset("UTF-8");
         AsyncHttpClient client = new AsyncHttpClient();
         client.setTimeout(Constant.CONNECT_TIMEOUT);
-        client.get(act, RequestAddress.APP_URL + postName, requestParams, asyncHttpResponseHandler);
+        client.get(act, postName, requestParams, asyncHttpResponseHandler);
 
     }
 

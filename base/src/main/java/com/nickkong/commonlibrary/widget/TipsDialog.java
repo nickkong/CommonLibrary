@@ -103,12 +103,38 @@ public class TipsDialog extends Dialog implements View.OnClickListener{
         tv_content.setText(content);
         Button dialog_left = (Button) dialog.findViewById(R.id.dialog_left);
         dialog_left.setText(this.dialog_left);
-        dialog_left.setOnClickListener(this);
+        dialog_left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(doConfirm==0){
+                    dismiss();
+                    listener.doConfirm();
+                }else if(doConfirm==1){
+                    dismiss();
+                }
+            }
+        });
         Button dialog_right = (Button) dialog.findViewById(R.id.dialog_right);
         dialog_right.setText(this.dialog_right);
-        dialog_right.setOnClickListener(this);
+        dialog_right.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(doConfirm==0){
+                    dismiss();
+                }else if(doConfirm==1){
+                    dismiss();
+                    listener.doConfirm();
+                }
+            }
+        });
         Button btn_confirm = (Button) dialog.findViewById(R.id.btn_confirm);
-        btn_confirm.setOnClickListener(this);
+        btn_confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dismiss();
+                listener.doConfirm();
+            }
+        });
         View ll_dialog = dialog.findViewById(R.id.ll_dialog);
 
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);

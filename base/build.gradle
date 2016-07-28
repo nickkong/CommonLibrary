@@ -54,4 +54,10 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.umeng.analytics:analytics:latest.integration'
     compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/baidumapapi_base_v4_0_0.jar')
+    compile files('libs/baidumapapi_map_v4_0_0.jar')
+    compile files('libs/baidumapapi_search_v4_0_0.jar')
+    compile files('libs/baidumapapi_util_v4_0_0.jar')
+    compile files('libs/locSDK_6.13.jar')
+    compile files('libs/jpush-android-2.1.7.jar')
 }
