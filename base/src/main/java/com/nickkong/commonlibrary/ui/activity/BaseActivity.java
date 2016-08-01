@@ -49,9 +49,10 @@ public abstract class BaseActivity extends FragmentActivity {
      * 重写跳转页面方法
      * 淡出淡入动画
      */
-    protected void startActivityByFade(Intent intent){
+    protected void startActivityByFade(Intent intent, boolean flag){
         super.startActivity(intent);
         startActivityAnimationByFade();
+        if (flag) finish();
     }
 
     /**
