@@ -143,7 +143,6 @@ public abstract class BaseActivity extends FragmentActivity {
         Map<String, Object> map = new HashMap();
 //        map.put("userId", sp_user.getString("userId",""));
         map.put("haode_session_id", sp_user.getString("sessionId",""));
-//        map.put("haode_session_id", "C851CFC5998DFB77B1602D45FCEC1D6F");
 
         return map;
     }
