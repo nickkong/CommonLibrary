@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.WindowManager;
 
 import com.nickkong.commonlibrary.R;
 import com.nickkong.commonlibrary.ui.listener.OnDialogClickListener;
@@ -31,6 +32,9 @@ public abstract class BaseActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         sp_user = getSharedPreferences(Constant.SP_KEY, Activity.MODE_PRIVATE);
         editor_user = sp_user.edit();
     }
